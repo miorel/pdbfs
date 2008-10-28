@@ -1,0 +1,38 @@
+=Introduction=
+
+The [http://www.pdb.org/ Protein Data Bank] (PDB) is an excellent repository of protein structures determined by X-ray crystallography, which has yet to be used to its full potential.
+
+pdbfs hopes to facilitate the writing of tools to data-mine the PDB by making it possible to mount the PDB as a filesystem. This package concerns itself with getting a list of structures and on the fly downloading and decompressing the proper files, so that other packages don't have to!
+
+=Prerequisites=
+  * build tools: gcc, make, etc.; on Ubuntu, get these with `sudo apt-get install build-essential`; on Gentoo, it's part of the system set
+  * rsync command; on Ubuntu, it should be installed by default, or you can `sudo apt-get install rsync`; on Gentoo, it's part of the system set
+
+=Synopsis=
+  * download the latest source
+{{{
+wget http://pdbfs.googlecode.com/files/pdbfs-0.0.3.tar.gz
+}}}
+  * unpack the archive and change into the newly-created directory
+{{{
+tar xvzf pdbfs-*.tar.gz
+cd pdbfs-*
+}}}
+  * configure, make, and install
+{{{
+./configure
+make
+sudo make install
+}}}
+  * mount the filesystem
+{{{
+sudo pdbfs -oallow_other,attr_timeout=0 /mnt/pdb
+}}}
+  * view a structure (it will be downloaded on the fly the first time you access it!)
+{{{
+pymol /mnt/pdb/2cba.pdb
+}}}
+  * unmount the filesystem
+{{{
+sudo umount /mnt/pdb
+}}}

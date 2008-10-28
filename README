@@ -1,0 +1,29 @@
+Introduction
+------------
+The RCSB Protein Data Bank (PDB), accessible at <http://www.pdb.org/>, is an
+excellent repository of protein structures determined by X-ray
+crystallography, which has yet to be used to its full potential.
+
+pdbfs hopes to facilitate the writing of tools to data-mine the PDB by 
+making it possible to mount the PDB as a filesystem. This package concerns
+itself with getting a list of structures and on the fly downloading and 
+decompressing the proper files, so that other packages don't have to!
+
+Prerequisite
+------------
+This package depends on the FUSE project, obtainable from
+<http://fuse.sourceforge.net/>.
+
+Installation Summary
+--------------------
+The usual `./configure; make; make install' should be sufficient to install
+this package. To learn more than you ever wanted to know about how you can
+tweak the installation, take a look at the output of `./configure --help'.
+If you don't have administrator privileges, you will be especially interested
+in the `--prefix' option, which allows you to customize the installation
+directory.
+
+Contact
+-------
+Comments, questions, and hate mail should be addressed to Miorel-Lucian Palii.
+I'm a wanderer, but chances are you can get hold of me at <mlpalii@gmail.com>.

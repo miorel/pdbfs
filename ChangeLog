@@ -1,0 +1,17 @@
+2008-10-27
+----------
+* changed configure script to look for rsync executable in PATH
+
+2008-08-17
+----------
+* added some preprocessor hacks to allow compiling against earlier versions of 
+  FUSE; thanks to the sshfs project for inspiration
+	
+2008-08-15
+----------
+* all FUSE functions implemented
+* updater thread now runs once a week (if filesystem ever mounted that long)
+
+2008-08-10
+----------
+* set up formal project

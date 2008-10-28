@@ -1,0 +1,5 @@
+* remove dependency on external rsync command
+* cache file list and size between runs
+* allow configuration of cache location and maximum size
+* make code more robust
+* improve code comments
